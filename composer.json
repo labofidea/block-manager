@@ -1,0 +1,25 @@
+{
+  "name" : "labofidea/block-manager",
+  "description" : "The BlockManager module for zendframework 2 ",
+  "require" : {
+        "php": ">=5.3.3",
+        "zendframework/zendframework" : "~2.2"
+  },
+  "keywords" : [ "zf2" ],
+  "license" : "BSD-3-Clause",
+  "authors": [
+        {
+            "name": "Felipe Almeida",
+            "email": "dev@labofidea.com"
+        }
+    ],
+    
+    "autoload": {
+        "psr-0": {
+            "BlockManager": "src/"
+        },
+        "classmap": [
+            "./Module.php"
+        ]
+    }
+}
