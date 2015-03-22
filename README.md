@@ -21,6 +21,6 @@ return array(
     'modules' => array(
         'BlockManager',
     )
-...
+?>
  </div>
 </pre>
