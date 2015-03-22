@@ -13,9 +13,9 @@ Installation of this module uses composer. For more information, please refer to
 <article>
  <h4>Enabling Module</h4>
 </article>
-<article>
+ 
 To enable the module you need to add 'BlockManager' to the modules list in the application configuration file:
-</article>
+ 
 <div class="highlight highlight-php">
 <pre>
 <span class="pl-pse">&lt;?php</span>
@@ -32,8 +32,8 @@ return array(
  <h4>Configuration</h4>
 </article>
 
-Configuration requires a block_manager key in the module config file or the module file:
-
+Configuration requires a block_manager key in the module config file or the module file:<br>
+ 
 /config/module.config.php
 
 <div class="highlight highlight-php">
