@@ -8,26 +8,16 @@
 namespace BlockManager;
 
 use Zend\View\Helper\AbstractHelper;
-use BlockManager\Renderer\BlockRenderer;
 use BlockManager\BlockManager;
  
 class BlockHelper extends AbstractHelper
 {
-
     /**
      *
      * @var BlockManager
      */
     protected $blockManager;
-
-    /**
-     *
-     * @var blockRenderer
-     */
-    protected $blockRenderer;
-    
-    
-    /**
+     /**
      * Constructor
      * 
      * @param BlockManager $blockManager
@@ -37,8 +27,7 @@ class BlockHelper extends AbstractHelper
         if ($blockManager) {
             $this->setBlockManager($blockManager);
         }
- 
-    }
+     }
 
     /**
      *
@@ -48,8 +37,6 @@ class BlockHelper extends AbstractHelper
     {
         $this->blockManager = $blockManager;
     }
-
-
     /**
      *
      * @param string $name            

@@ -17,12 +17,10 @@ class BlockInitializer implements InitializerInterface
     public function initialize($instance, ServiceLocatorInterface $serviceLocator){
         
         if ($instance  instanceof  \BlockManager\AbstractBlock ){
-            
-            $config = (array)$serviceLocator->getServiceLocator()->get('config');
-            $helperPluginManager = $serviceLocator->getServiceLocator()->get('ViewHelperManager');
-            $blockManagerConfig = $config['block_manager'];
-            $resolver = new TemplatePathResolver($blockManagerConfig);
-            $instance->setResolver($resolver);
+            $serviceLocator =  $serviceLocator->getServiceLocator();
+            $helperPluginManager = $serviceLocator->get('ViewHelperManager');
+            $templateResolver = $serviceLocator->get('TemplateResolver');
+            $instance->setResolver($templateResolver);
             $instance->setHelperPluginManager($helperPluginManager);
         }
     }

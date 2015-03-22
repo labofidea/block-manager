@@ -39,7 +39,7 @@ class BlockManager extends ServiceManager implements ServiceLocatorAwareInterfac
     public function __construct(ConfigInterface  $configuration = null)
     {
         parent::__construct($configuration);
-                
+         
         $this->addInitializer('BlockManager\BlockInitializer');
     }
     

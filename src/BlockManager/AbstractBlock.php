@@ -40,10 +40,6 @@ abstract class AbstractBlock implements EventManagerAwareInterface
      */
     private $eventManager = null;
     /**
-     * @var string
-     */
-    protected $blockEventIdentifier = __CLASS__;
-    /**
      * Set the event manager instance  
      *
      * @param  EventManagerInterface $eventManager
@@ -61,7 +57,7 @@ abstract class AbstractBlock implements EventManagerAwareInterface
      */
     public function getEventManager()
     {   
-        return $this->events;
+        return $this->eventManager;
     }
     
     /**
@@ -192,8 +188,4 @@ abstract class AbstractBlock implements EventManagerAwareInterface
          
         return $this->helpersCache[$name];
     }
-     
-    
-    
-}
- 
+} 

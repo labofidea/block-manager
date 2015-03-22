@@ -69,14 +69,18 @@ class TemplatePathResolver implements ResolverInterface
         if (! is_array($options) && ! $options instanceof \Traversable) {
             throw new InvalidArgumentException(sprintf('Expected array or Traversable object; received "%s"', (is_object($options) ? get_class($options) : gettype($options))));
         }
-        
+                
         if(isset($options['template_path_stack'])){
             foreach ($options['template_path_stack'] as $path){
                 $this->addPath($path);
             }
         }
+        
+        if (isset($options['defautl_extension'])){
+            $this->setDefaultExtension($options['defautl_extension']);
+        }
     }
-
+    
     /**
      *
      * @return the $defaultExtension
