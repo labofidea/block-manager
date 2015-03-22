@@ -13,7 +13,8 @@ Installation of this module uses composer. For more information, please refer to
 <article>
  <h4>Enabling Module</h4>
 </article>
-To enable the module you need to add 'BlockManager' to the modules list in the application configuration:
+To enable the module you need to add 'BlockManager' to the modules list in the application configuration file:
+
 <div class="highlight highlight-php">
 <pre>
 <span class="pl-pse">&lt;?php</span>
