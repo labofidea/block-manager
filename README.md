@@ -27,9 +27,38 @@ return array(
 )
 </pre>
  </div>
+
+<article>
+ <h3>Block Class</h3>
+</article>
+
+Blocks classes, need to be simple objects extending BlockManager\AbstractBlock:<br> 
+ 
+ /Application/Block/BannerBlock.php
+ 
+<div class="highlight highlight-php">
+<pre>
+<span class="pl-pse">&lt;?php</span>
+<?php
+namespace Application\Block;
+
+use BlockManager\AbstractBlock;
+class BannerBlock extends AbstractBlock
+{
+    public function getAll(){
+        return array(
+        'banner1.jpg',
+        'banner2.jpg',
+        'banner3.jpg',
+        );
+    }
+}
+...
+</pre>
+</div>
  
 <article>
- <h3>Config blocks</h3>
+ <h3>Config block</h3>
 </article>
 
 Configuration requires a block_manager key in the module config file or the module class file:<br>
@@ -100,4 +129,3 @@ return array(
  ...
  </pre>
  </div>
-
