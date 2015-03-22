@@ -10,5 +10,15 @@ Installation of this module uses composer. For more information, please refer to
 
 <div class="highlight highlight-sh"><pre>php composer.phar require labofidea/block-manager</div>
 
-
- 
+<article>
+ <h4>Enabling Module</h4>
+</article>
+To enable the module you need to add 'BlockManager' to the modules list in the application configuration:
+<div class="highlight highlight-php">
+<?php
+return array(
+    'modules' => array(
+        'BlockManager',
+    )
+...
+ </div>
