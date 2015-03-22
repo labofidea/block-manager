@@ -16,11 +16,10 @@ Installation of this module uses composer. For more information, please refer to
 To enable the module you need to add 'BlockManager' to the modules list in the application configuration:
 <div class="highlight highlight-php">
 <pre>
-<?php
+<span class="pl-pse">&lt;?php</span>
 return array(
     'modules' => array(
         'BlockManager',
     )
-?>
  </div>
 </pre>
