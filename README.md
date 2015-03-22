@@ -39,7 +39,7 @@ Blocks classes, need to be simple objects extending BlockManager\AbstractBlock:<
 <div class="highlight highlight-php">
 <pre>
 <span class="pl-pse">&lt;?php</span>
-<?php
+
 namespace Application\Block;
 
 use BlockManager\AbstractBlock;
