@@ -13,8 +13,9 @@ Installation of this module uses composer. For more information, please refer to
 <article>
  <h4>Enabling Module</h4>
 </article>
+<article>
 To enable the module you need to add 'BlockManager' to the modules list in the application configuration file:
-
+</article>
 <div class="highlight highlight-php">
 <pre>
 <span class="pl-pse">&lt;?php</span>
@@ -22,5 +23,58 @@ return array(
     'modules' => array(
         'BlockManager',
     )
- </div>
+    ...
+)
 </pre>
+ </div>
+ 
+<article>
+ <h4>Configuration</h4>
+</article>
+
+Configuration requires a block_manager key in the module config file or the module file:
+
+/config/module.config.php
+
+<div class="highlight highlight-php">
+<pre>
+<span class="pl-pse">&lt;?php</span>
+return array(
+    'block_manager' => array(
+        'invokables' => array(
+            'menuBlock' => 'Application\Block\Menu'
+        ),
+    ),
+ ...
+ 
+</pre>
+ </div>
+ 
+ /module.php
+ 
+<div class="highlight highlight-php">
+<pre>
+<span class="pl-pse">&lt;?php</span>
+namespace Application;
+use BlockManager\BlockConfigProviderInterface;
+
+class Module implements BlockConfigProviderInterface
+{
+
+    /**
+     * config Block classes
+     *
+     * @return array
+     */
+    public function getBlockConfig()
+    {
+         return array(
+            'invokables' => array(
+                'bannerBlock' => 'Application\Block\BannerBlock',
+            ),
+        );
+    }
+...
+ 
+</pre>
+</div>
