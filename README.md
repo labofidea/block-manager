@@ -29,7 +29,7 @@ return array(
  </div>
  
 <article>
- <h3>Configuration</h3>
+ <h3>Config blocks</h3>
 </article>
 
 Configuration requires a block_manager key in the module config file or the module class file:<br>
@@ -79,5 +79,25 @@ class Module implements BlockConfigProviderInterface
 </pre>
 </div>
 
+<article>
+ <h3>Config block templates</h3>
+</article>
 
+Block template configuration requires a block_template_config key in the module config file :<br>
+ 
+/config/module.config.php
+
+<div class="highlight highlight-php">
+<pre>
+<span class="pl-pse">&lt;?php</span>
+return array(
+    'block_template_config'=> array(
+        'template_path_stack'=> array(
+            __DIR__ . '/../view/block'
+       )
+     ),
+   ),
+ ...
+ </pre>
+ </div>
 
