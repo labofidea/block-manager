@@ -29,10 +29,10 @@ return array(
  </div>
  
 <article>
- <h4>Configuration</h4>
+ <h3>Configuration</h3>
 </article>
 
-Configuration requires a block_manager key in the module config file or the module file:<br>
+Configuration requires a block_manager key in the module config file or the module class file:<br>
  
 /config/module.config.php
 
@@ -78,3 +78,6 @@ class Module implements BlockConfigProviderInterface
  
 </pre>
 </div>
+
+
+
