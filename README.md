@@ -32,9 +32,9 @@ return array(
  <h3>Block Class</h3>
 </article>
 
-Blocks classes, need to be simple objects extending BlockManager\AbstractBlock:<br> 
+A Block class, need to be a simple object extending BlockManager\AbstractBlock: <br> 
  
- /Application/Block/BannerBlock.php
+/Application/Block/BannerBlock.php
  
 <div class="highlight highlight-php">
 <pre>
