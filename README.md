@@ -1,5 +1,5 @@
 # block-manager
-zend framework 2 module to manage block classes
+zend framework 2 module to manage blocks
 
 <article>
  <h2>Installation</h2>
