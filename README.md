@@ -65,7 +65,7 @@ class BannerBlock extends AbstractBlock
 Block Templates are mapped based on the block class name.<br> 
 
  <div class="highlight highlight-sh"><pre>
- As an example, the block class named /Application/Block/BannerBlock.php would be mapped to the template       /Application/view/Block/banner-block.phtml
+ As an example, the block class named /Application/Block/BannerBlock.php <br> would be mapped to the template       /Application/view/Block/banner-block.phtml
    </pre></div>
 
 <div class="highlight highlight-php">
