@@ -8,7 +8,7 @@ zend framework 2 module to manage block classes
 Installation of this module uses composer. For more information, please refer to 
 <a href="http://getcomposer.org/">getcomposer.org</a>
 
-<div class="highlight highlight-sh"><pre>php composer.phar require labofidea/block-manager</div>
+<div class="highlight highlight-sh"><pre>php composer.phar require labofidea/block-manager</pre></div>
 
 <article>
  <h3>Enabling Module</h3>
@@ -64,7 +64,7 @@ class BannerBlock extends AbstractBlock
 
 A Block Template, are map base on the name of block class: <br> 
  
- <div class="highlight highlight-sh"> /Application/Block/BannerBlock.php --> /Application/view/Block/banner-block.phtml</div>
+ <div class="highlight highlight-sh"><pre>/Application/Block/BannerBlock.php --> /Application/view/Block/banner-block.phtml</pre></div>
 
 <div class="highlight highlight-php">
 <pre>
