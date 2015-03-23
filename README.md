@@ -155,3 +155,17 @@ return array(
  ...
  </pre>
  </div>
+ 
+ <article>
+ <h3>Render Block</h3>
+</article>
+
+To Render a block you need to use getblock($name) helper :<br>
+ 
+/view/index/index.phtml
+
+<div class="highlight highlight-php">
+<pre>
+ <span class="pl-pse">&lt;?php</span> echo $this->getblock('bannerBlock'); ?>
+</pre>
+</div>
