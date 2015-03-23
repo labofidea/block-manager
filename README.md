@@ -32,7 +32,7 @@ return array(
  <h3>Block Class</h3>
 </article>
 
-A Block class, need to be a simple object extending BlockManager\AbstractBlock: <br> 
+The Block class need to be a simple object, extending BlockManager\AbstractBlock: <br> 
  
 /Application/Block/BannerBlock.php
  
@@ -87,7 +87,7 @@ Block Templates are mapped based on the block class name.<br>
  <h3>Config block</h3>
 </article>
 
-Configuration requires a block_manager key in the module config file or the module class file:<br>
+Configuration requires a block_manager key in the module config file or the method getBlockConfig(),implemented by<br> BlockManager\BlockConfigProviderInterface, in the module class:<br>
  
 /config/module.config.php
 
