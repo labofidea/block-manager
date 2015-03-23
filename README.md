@@ -57,6 +57,28 @@ class BannerBlock extends AbstractBlock
 </pre>
 </div>
  
+ 
+<article>
+ <h3>Block Template</h3>
+</article>
+
+A Block Template, need to be a simple text file : <br> 
+ 
+/Application/Block/BannerBlock.php
+ 
+<div class="highlight highlight-php">
+<pre>
+<span class="pl-pse">&lt;?php</span>
+  foreach($this->getAll() as $banner):
+  
+?>
+ &lt;img src="banners/<span class="pl-pse">&lt;?php</span> echo $banner; ?>" >
+ <span class="pl-pse">&lt;?php</span>
+  endforeach;
+ ?>
+</pre>
+</div>
+ 
 <article>
  <h3>Config block</h3>
 </article>
