@@ -62,10 +62,10 @@ class BannerBlock extends AbstractBlock
  <h3>Block Template</h3>
 </article>
 
-A Block Template, need to be a simple text file : <br> 
+A Block Template, are map base on the name of block class: <br> 
  
-/Application/Block/BannerBlock.php
- 
+ <div class="highlight highlight-sh"> /Application/Block/BannerBlock.php --> /Application/view/Block/banner-block.phtml</div>
+
 <div class="highlight highlight-php">
 <pre>
 <span class="pl-pse">&lt;?php</span>
