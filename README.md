@@ -84,7 +84,7 @@ Block Templates are mapped based on the block class name.<br>
 </div>
  
 <article>
- <h3>Config block</h3>
+ <h3>Config Block Class</h3>
 </article>
 
 Configuration requires a block_manager key in the module config file or the method getBlockConfig(),implemented by<br> BlockManager\BlockConfigProviderInterface, in the module class:<br>
@@ -135,7 +135,7 @@ class Module implements BlockConfigProviderInterface
 </div>
 
 <article>
- <h3>Config block templates</h3>
+ <h3>Config Block Template</h3>
 </article>
 
 Block template configuration requires a block_template_config key in the module config file :<br>
@@ -157,7 +157,7 @@ return array(
  </div>
  
  <article>
- <h3>Rendering Block</h3>
+ <h3>Render Block</h3>
 </article>
 
 To Render a block you need to use getBlock helper :<br>
