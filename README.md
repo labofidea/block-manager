@@ -68,6 +68,8 @@ Block Templates are mapped based on the block class name.<br>
  As an example, the block class named /Application/Block/BannerBlock.php, would be mapped to the template<br> /Application/view/Block/banner-block.phtml
    </pre></div>
 
+/Application/view/Block/banner-block.phtml
+
 <div class="highlight highlight-php">
 <pre>
 <span class="pl-pse">&lt;?php</span>
