@@ -157,7 +157,7 @@ return array(
  </div>
  
  <article>
- <h3>Render Block</h3>
+ <h3>Rendering Block</h3>
 </article>
 
 To Render a block you need to use getBlock helper :<br>
