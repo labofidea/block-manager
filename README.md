@@ -8,7 +8,7 @@ zend framework 2 module to manage blocks
 Installation of this module uses composer. For more information, please refer to 
 <a href="http://getcomposer.org/">getcomposer.org</a>
 
-<div class="highlight highlight-sh"><pre>php composer.phar require labofidea/block-manager</pre></div>
+<div class="highlight highlight-sh"><pre>php composer.phar require labofidea/block-manager:0.*</pre></div>
 
 <article>
  <h3>Enabling Module</h3>
