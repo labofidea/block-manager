@@ -33,7 +33,6 @@ return array(
 </article>
 
 The Block class need to be a simple object, extending BlockManager\AbstractBlock: <br> 
- 
 /Application/Block/BannerBlock.php
  
 <div class="highlight highlight-php">
@@ -65,8 +64,7 @@ class BannerBlock extends AbstractBlock
 Block Templates are mapped based on the block class name.<br> 
 
  <div class="highlight highlight-sh"><pre>
- As an example, the block class named /Application/Block/BannerBlock.php, would be mapped<br/> to the template
- /Application/view/Block/banner-block.phtml
+ As an example, the block class named /Application/Block/BannerBlock.php, would be mapped<br/> to the template /Application/view/Block/banner-block.phtml
    </pre></div>
 
 /Application/view/Block/banner-block.phtml
