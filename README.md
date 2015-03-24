@@ -126,6 +126,13 @@ class Module implements BlockConfigProviderInterface
             'invokables' => array(
                 'bannerBlock' => 'Application\Block\BannerBlock',
             ),
+            'factories' => array(
+                'Slides' => function ($blockManager) {
+                  $serviceLocator =  $blockManager->getServiceLocator();
+                  $dbService = $serviceLocator->get('SomeDbService');
+                return new SomeModule\Block\Slides($dbService);
+              },
+            ),
         );
     }
 ...
