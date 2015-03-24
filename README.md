@@ -134,27 +134,6 @@ class Module implements BlockConfigProviderInterface
 </div>
 
 <article>
- <h3>Sub-keys</h3>
-</article>
-
-<div class="section" id="using-configuration">
-<p>Configuration requires a <tt class="docutils literal"><span class="pre">service_manager</span></tt> key at the top level of your configuration, with any of the
-following sub-keys:</p>
-<ul class="simple"><li><strong>abstract_factories</strong>, which should be an array of abstract factory class names.</li>
-<li><strong>aliases</strong>, which should be an associative array of alias name/target name pairs (where the target name may also
-be an alias).</li>
-<li><strong>factories</strong>, an array of service name/factory class name pairs. The factories should be either classes
-implementing <tt class="docutils literal"><span class="pre">Zend\ServiceManager\FactoryInterface</span></tt> or invokable classes. If you are using PHP configuration
-files, you may provide any PHP callable as the factory.</li>
-<li><strong>invokables</strong>, an array of service name/class name pairs. The class name should be class that may be directly
-instantiated without any constructor arguments.</li>
-<li><strong>services</strong>, an array of service name/object pairs. Clearly, this will only work with PHP configuration.</li>
-<li><strong>shared</strong>, an array of service name/boolean pairs, indicating whether or not a service should be shared. By
-default, the <tt class="docutils literal"><span class="pre">ServiceManager</span></tt> assumes all services are shared, but you may specify a boolean false value here
-to indicate a new instance should be returned.</li>
-</ul></div>
-
-<article>
  <h3>Config Block Template</h3>
 </article>
 
