@@ -65,7 +65,7 @@ class BannerBlock extends AbstractBlock
 Block Templates are mapped based on the block class name.<br> 
 
  <div class="highlight highlight-sh"><pre>
- As an example, the block class named /Application/Block/BannerBlock.php, would be mapped to the template<br/>
+ As an example, the block class named /Application/Block/BannerBlock.php, would be mapped<br/> to the template
  /Application/view/Block/banner-block.phtml
    </pre></div>
 
@@ -88,7 +88,7 @@ Block Templates are mapped based on the block class name.<br>
  <h3>Config Block Class</h3>
 </article>
 
-Configuration requires a block_manager key in the module config file or the method getBlockConfig(),implemented by<br> BlockManager\BlockConfigProviderInterface, in the module class:<br>
+Configuration requires a block_manager key in the module config file or the method getBlockConfig(),<br>implemented by BlockManager\BlockConfigProviderInterface, in the module class:<br>
  
 /config/module.config.php
 
