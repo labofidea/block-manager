@@ -76,8 +76,8 @@ class TemplatePathResolver implements ResolverInterface
             }
         }
         
-        if (isset($options['defautl_extension'])){
-            $this->setDefaultExtension($options['defautl_extension']);
+        if (isset($options['default_extension'])){
+            $this->setDefaultExtension($options['default_extension']);
         }
     }
     
