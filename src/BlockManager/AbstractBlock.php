@@ -19,6 +19,9 @@ use BlockManager\Resolver\ResolverInterface;
 
 abstract class AbstractBlock implements EventManagerAwareInterface
 {
+    
+    const RENDER_BEFORE_BLOCK_EVENT = 'render.block.before';
+    const RENDER_AFTER_BLOCK_EVENT = 'render.block.after';
     /**
      * Template resolver
      *
@@ -72,15 +75,18 @@ abstract class AbstractBlock implements EventManagerAwareInterface
         $fileName = self::normalizeClassName($reflection->getShortName());
         $file = $this->resolver($fileName);
         $content = '';
-         
+       
         if(!$file){
-            throw new  RuntimeException(sprintf('Invalid Template %s.',$fileName));
+            throw new RuntimeException(sprintf('Invalid Template %s.',$fileName));
         }
     
         try {
             ob_start();
+            $this->getEventManager()->trigger(self::RENDER_BEFORE_BLOCK_EVENT);
+            $this->getEventManager()->trigger(self::RENDER_AFTER_BLOCK_EVENT);
             $file =  include $file;
             $content = ob_get_clean();
+            
         }catch (\Exception $e){
             ob_end_clean();
              throw new RuntimeException(sprintf('Error when trying render %s.',$fileName));
@@ -101,7 +107,7 @@ abstract class AbstractBlock implements EventManagerAwareInterface
     {
          
         if (!$this->getHelperPluginManager()->has($method) && !method_exists($this, $method)){
-            return;           
+              throw new DomainException(sprintf('Invalid method named %s.',$method));         
         }
         
         return $this->getHelper($method, $argv);

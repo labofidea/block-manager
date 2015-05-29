@@ -9,25 +9,29 @@ namespace BlockManager;
 
 use Zend\View\Helper\AbstractHelper;
 use BlockManager\BlockManager;
- 
+
 class BlockHelper extends AbstractHelper
 {
+
     /**
      *
      * @var BlockManager
      */
     protected $blockManager;
-     /**
+
+    protected $blockCache = array();
+
+    /**
      * Constructor
-     * 
-     * @param BlockManager $blockManager
+     *
+     * @param BlockManager $blockManager            
      */
-    public function __construct(BlockManager $blockManager = null){
-        
+    public function __construct(BlockManager $blockManager = null)
+    {
         if ($blockManager) {
             $this->setBlockManager($blockManager);
         }
-     }
+    }
 
     /**
      *
@@ -38,12 +42,25 @@ class BlockHelper extends AbstractHelper
         $this->blockManager = $blockManager;
     }
     /**
+     * 
+     * @param string $name
+     */
+    protected function renderBlock($name)
+    {
+        if (! isset($this->blockCache[$name])) {
+            $this->blockCache[$name] = $this->blockManager->get($name)->render();
+        }
+        
+        return $this->blockCache[$name];
+    }
+
+    /**
      *
      * @param string $name            
      */
     public function __invoke($name)
     {
-       return  $this->blockManager->get($name)->render();
+        return $this->renderBlock($name);
     }
 }
  

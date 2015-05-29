@@ -20,8 +20,10 @@ class BlockInitializer implements InitializerInterface
             $serviceLocator =  $serviceLocator->getServiceLocator();
             $helperPluginManager = $serviceLocator->get('ViewHelperManager');
             $templateResolver = $serviceLocator->get('TemplateResolver');
+            $eventManager = $serviceLocator->get('EventManager');
             $instance->setResolver($templateResolver);
             $instance->setHelperPluginManager($helperPluginManager);
+            $instance->setEventManager($eventManager);
         }
     }
 }
