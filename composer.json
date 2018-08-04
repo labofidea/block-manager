@@ -22,11 +22,4 @@
             "./Module.php"
         ]
     },
-  "setup":[
-  {
-  "class":"test12313",
-  "version":"1.2.3"
-  }
-  ]
-  
 }
